@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  
+  <title>FRM-Option - GeekerLee&#39;s Blog</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+  <link rel="shortcut icon" href="https://image.flaticon.com/icons/svg/1089/1089370.svg" type="image/png" />
+  <meta name="description" content="FRM-Option Properties of options ## Call options  Put options  Put-call Parity \[ P+S&#x3D;C+PV(K) \]  European option -- same underlying, strike, maturity Div adjustment  discrete: \(P+S-D&#x3D;C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FRM-Option">
+<meta property="og:url" content="http://geekerlee.github.io/2020/07/28/FRM-Option/index.html">
+<meta property="og:site_name" content="GeekerLee&#39;s Blog">
+<meta property="og:description" content="FRM-Option Properties of options ## Call options  Put options  Put-call Parity \[ P+S&#x3D;C+PV(K) \]  European option -- same underlying, strike, maturity Div adjustment  discrete: \(P+S-D&#x3D;C">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2020/07/28/O5oKHPc23wJVC7y.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/28/knXEh4RAxz5SIFC.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/28/FrESObfyVUP9LuW.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/28/dju96SaPJvGgfWB.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/28/giMCsVSG7mTWbaO.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/28/9Lmbt4x6kZcj7CU.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/28/YHL4saj6vNpho7l.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/28/CNcg5ASFkjD8V7z.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/28/TCp2hjFKUZiN4me.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/28/CGTBgEDtmYIwrJn.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/28/IDsQ4GfiTdSt5Pw.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/28/h4GvZxta2BLAUgf.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/28/OlRdrmGSK9g8HnF.png">
+<meta property="article:published_time" content="2020-07-28T14:14:02.634Z">
+<meta property="article:modified_time" content="2020-07-28T12:16:54.000Z">
+<meta property="article:author" content="GeekerLee">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/07/28/O5oKHPc23wJVC7y.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/nexmoe/nexmoe.github.io@latest/css/style.css,npm/highlight.js@9.15.8/styles/atom-one-dark.css,gh/nexmoe/nexmoe.github.io@latest/lib/mdui_043tiny/css/mdui.css,gh/nexmoe/nexmoe.github.io@latest/lib/iconfont/iconfont.css" crossorigin>
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1863679_tix2mhq89tf.css">
+  
+  <!--<link rel="stylesheet" href="/css/style.css?v=1595945676269">-->
+
+  
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2020/06/10/JkoKBNCIcdPejYi.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="GeekerLee" class="mdui-btn mdui-btn-icon"><img src="https://i.loli.net/2020/06/03/sL2ZSebvRtiCKB4.jpg" alt="GeekerLee"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="GeekerLee">
+            <img src="https://i.loli.net/2020/06/03/sL2ZSebvRtiCKB4.jpg" alt="GeekerLee" alt="GeekerLee">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>11</div>
+        <div><span>Tags</span>3</div>
+        <div><span>Categories</span>0</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+            <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+        </form>
+    </div>
+</div>
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Social</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/21382862" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/geekerlee" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://www.zhihu.com/people/da-ge-19-9" target="_blank" mdui-tooltip="{content: 'zhihu'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-zhihu"></i>
+        </a><a class="mdui-ripple" href="https://www.linkedin.com/in/li-t-62693a140/" target="_blank" mdui-tooltip="{content: 'linkedin'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-icon_linkedin"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Tag Cloud</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CFA/" style="font-size: 10px;">CFA</a> <a href="/tags/Econ/" style="font-size: 15px;">Econ</a> <a href="/tags/Other/" style="font-size: 20px;">Other</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 GeekerLee
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+  
+      <div class="nexmoe-post-cover" style="padding-bottom: 33.33333333333333%;"> 
+          <img data-src="https://i.loli.net/2020/06/10/JkoKBNCIcdPejYi.jpg" data-sizes="auto" alt="FRM-Option" class="lazyload">
+          <h1>FRM-Option</h1>
+      </div>
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年07月28日</a>
+    <a><i class="nexmoefont icon-areachart"></i>693 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+</div>
+
+  <div class="nexmoe-post-right">
+    
+  </div>
+
+  <article>
+    <h1 id="frm-option">FRM-Option</h1>
+<h2 id="properties-of-options">Properties of options</h2>
+<p>## Call options</p>
+<p><img data-sizes="auto" data-src="https://i.loli.net/2020/07/28/O5oKHPc23wJVC7y.png" alt="image-20200728162730582" class="lazyload"></p>
+<h2 id="put-options">Put options</h2>
+<p><img data-sizes="auto" data-src="https://i.loli.net/2020/07/28/knXEh4RAxz5SIFC.png" alt="image-20200728162756824" class="lazyload"></p>
+<h2 id="put-call-parity">Put-call Parity</h2>
+<p><span class="math display">\[
+P+S=C+PV(K)
+\]</span></p>
+<ul>
+<li><p>European option -- same underlying, strike, maturity</p></li>
+<li><p>Div adjustment</p>
+<ul>
+<li><strong>discrete:</strong> <span class="math inline">\(P+S-D=C+Ke^{-rt}\)</span></li>
+<li><strong>discrete rate q:</strong> <span class="math inline">\(P+Se^{-qt}=C+Ke^{-rt}\)</span></li>
+</ul></li>
+<li><p><strong>annual compound:</strong> <span class="math inline">\(P+S=C+\frac{K}{(1+R_f)^t}\)</span></p></li>
+<li><p>American option: no exact relationship</p></li>
+</ul>
+<h3 id="portfolio-construction">Portfolio construction</h3>
+<p><span class="math display">\[
+P+S=C+Ke^{-rt} \\
+P=C+Ke^{-rt}-S
+\]</span></p>
+<p>long put = long call, long zero-compound bond, short stock</p>
+<h3 id="arbitrary">Arbitrary</h3>
+<p><span class="math display">\[
+P+S (buy)&lt;C+Ke^{-rt}(sell)
+\]</span></p>
+<p>###Pricing</p>
+<p><img data-sizes="auto" data-src="https://i.loli.net/2020/07/28/FrESObfyVUP9LuW.png" alt="image-20200728165128356" class="lazyload"></p>
+<h2 id="simple-strategies">Simple Strategies</h2>
+<p>option + underlying</p>
+<h3 id="covered-call">Covered Call</h3>
+<p><img data-sizes="auto" data-src="https://i.loli.net/2020/07/28/dju96SaPJvGgfWB.png" alt="image-20200728165817157" class="lazyload"></p>
+<h3 id="protective-put">Protective Put</h3>
+<p><img data-sizes="auto" data-src="https://i.loli.net/2020/07/28/giMCsVSG7mTWbaO.png" alt="image-20200728165912721" class="lazyload"></p>
+<h3 id="principal-protected-notesppn">Principal Protected Notes(PPN)</h3>
+<ul>
+<li>A PPN is structured as a zero-coupon bond and an option with a payoff that is linked to an underlying asset, index, or benchmark.</li>
+<li>It guarantees <strong>a minimum return equal to the investor's initial investment</strong> (the <strong>principal</strong> amount), regardless of the performance of the underlying assets.</li>
+</ul>
+<h2 id="spread-strategies">Spread Strategies</h2>
+<h3 id="bull-spread">Bull spread</h3>
+<p>outlook is bullish, buy low sell high ~ 低买高卖，行权价格</p>
+<p><img data-sizes="auto" data-src="https://i.loli.net/2020/07/28/9Lmbt4x6kZcj7CU.png" alt="image-20200728173009358" class="lazyload"></p>
+<h3 id="bear-spread">Bear Spread</h3>
+<p>outlook is bearish, buy high, sell low</p>
+<p><img data-sizes="auto" data-src="https://i.loli.net/2020/07/28/YHL4saj6vNpho7l.png" alt="image-20200728173422818" class="lazyload"></p>
+<h3 id="box-spread">Box spread</h3>
+<ul>
+<li>A box spread is a combination of a bull call spread with strike prices <span class="math inline">\(K_1\)</span> and <span class="math inline">\(K_2\)</span> and a bear put spread with the same two strike prices.</li>
+<li>The payoff from a box spread is always <span class="math inline">\(K_2 – K_1\)</span> .</li>
+<li>Box spread = Bull spread + Bear spread</li>
+</ul>
+<h3 id="butterfly-spread">Butterfly Spread</h3>
+<p><img data-sizes="auto" data-src="https://i.loli.net/2020/07/28/CNcg5ASFkjD8V7z.png" alt="image-20200728173829735" class="lazyload"></p>
+<p>long option <span class="math inline">\(k_1\)</span>, long option <span class="math inline">\(k_3\)</span>, short option <span class="math inline">\(k_2\)</span>, <span class="math inline">\(k_2=\frac{k_1+K_3}{2}\)</span></p>
+<ul>
+<li><p>Expects low volatility</p></li>
+<li><p>Capped risk</p></li>
+</ul>
+<h3 id="calender-spread">Calender Spread</h3>
+<p>long long-term, short short-term</p>
+<h3 id="combination-spread">Combination Spread</h3>
+<p>Call+Put</p>
+<h4 id="straddle-and-strangle">Straddle and Strangle</h4>
+<p><img data-sizes="auto" data-src="https://i.loli.net/2020/07/28/TCp2hjFKUZiN4me.png" alt="image-20200728174328253" class="lazyload"></p>
+<p>Strangle is cheaper than straddle——购买高行权价格的看涨期权，购买低行权价格的看跌期权，期权费更加便宜。</p>
+<p><img data-sizes="auto" data-src="https://i.loli.net/2020/07/28/CGTBgEDtmYIwrJn.png" alt="image-20200728174609277" class="lazyload"></p>
+<h2 id="exotic-option">Exotic Option</h2>
+<h3 id="gap-option">Gap Option</h3>
+<ul>
+<li>Call gap option
+<ul>
+<li><span class="math inline">\(S_T&gt;K_2\)</span>, <span class="math inline">\(Payoff=S_T-K_1\)</span></li>
+</ul></li>
+<li>Put option
+<ul>
+<li><span class="math inline">\(S_T&lt;K_2\)</span>, <span class="math inline">\(Payoff=K_1-S_T\)</span></li>
+</ul></li>
+</ul>
+<h3 id="forward-start-option">Forward Start option</h3>
+<p>A forward start option is an advance purchase of a put or call option that will become active at some specified future time. <strong>It is essentially a forward on an option</strong></p>
+<h3 id="compound-option">Compound option</h3>
+<ul>
+<li><p>Options on options</p></li>
+<li><p>A call on a call, a put on a call, a call on a put, and a put on a put</p></li>
+<li><p>If both options are exercised, the total premium will be more than the premium on a single option</p></li>
+</ul>
+<h3 id="chooser-option">Chooser option</h3>
+<p>After a specified period of time, the holder can choose whether the option is a call or a put.</p>
+<h3 id="barrier-option">Barrier Option</h3>
+<ul>
+<li><p>Payoffs and existence depend on whether the underlying’s asset price reaches a certain barrier level over the life of the option.</p></li>
+<li><p>A knock-out option ceases to exist when the underlying asset price reaches a certain barrier while a knock-in option comes into existence only when the underlying asset price reaches a barrier.</p></li>
+</ul>
+<p><img data-sizes="auto" data-src="https://i.loli.net/2020/07/28/IDsQ4GfiTdSt5Pw.png" alt="image-20200728195556115" class="lazyload"></p>
+<p>==<strong>In-out parity</strong>==</p>
+<p>down-and-out call + doan-and-in call = call option</p>
+<h3 id="binary-options">Binary options</h3>
+<ul>
+<li>==Cash-or-Nothing== : Pays some fixed amount of cash if the option expires in-the-money.</li>
+<li>==Asset-or-Nothing== : Pays the value of the underlying security.</li>
+<li>A regular European call option is equivalent to a long position in an asset-or-nothing call and a short position in a cash-or-nothing call.</li>
+<li>A regular European put option is equivalent to a long position in a cash-or-nothing put and a short position in an asset-or-nothing put.</li>
+</ul>
+<p><strong>Call option</strong> = <strong>long</strong> asset or nothing call + <strong>short</strong> cash or nothing call</p>
+<p><strong>Put option</strong> = <strong>long</strong> cash or nothing put + <strong>short</strong> asset or nothing put</p>
+<h3 id="lookback-options">Lookback options</h3>
+<ul>
+<li>Payoffs depend on maximum or minimum price of the underlying asset</li>
+<li>With <strong>floating strike</strong> and with <strong>fixed strike</strong></li>
+</ul>
+<p><img data-sizes="auto" data-src="https://i.loli.net/2020/07/28/h4GvZxta2BLAUgf.png" alt="image-20200728200358121" class="lazyload"></p>
+<h3 id="asian-options">Asian options</h3>
+<ul>
+<li>Payoff dependon arithmetic average of the underlying asset price</li>
+<li>Average price option and average strike option.</li>
+</ul>
+<p><img data-sizes="auto" data-src="https://i.loli.net/2020/07/28/OlRdrmGSK9g8HnF.png" alt="image-20200728200702637" class="lazyload"></p>
+<p>==Path-dependence==</p>
+<h3 id="volatility-and-variance-swap">Volatility and Variance Swap</h3>
+<h4 id="volatility-swap">Volatility Swap</h4>
+<ul>
+<li><p>Exchanging of volatility based on a <strong>national principal</strong></p></li>
+<li><p>Payments base on <strong>pre-specified volatility and realized volatility</strong>.</p></li>
+</ul>
+<h4 id="variance-swap">Variance Swap</h4>
+<ul>
+<li>Exchanging pre-specified fixed variance rate for realized variance rate</li>
+</ul>
+<h3 id="static-options-replication">Static options Replication</h3>
+<p>This technique involves searching for a portfolio of actively traded options (regular options) that approximately replicates the exotic option. Shorting this position provides the hedge.</p>
+
+  </article>
+
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+</div>
+
+  <div class="nexmoe-post-footer">
+    
+      
+  <div class="nexmoe-post-copyright">
+    <strong>Author：</strong>GeekerLee<br>
+    <strong>Link：</strong><a href="http://geekerlee.github.io/2020/07/28/FRM-Option/" title="http:&#x2F;&#x2F;geekerlee.github.io&#x2F;2020&#x2F;07&#x2F;28&#x2F;FRM-Option&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;geekerlee.github.io&#x2F;2020&#x2F;07&#x2F;28&#x2F;FRM-Option&#x2F;</a><br>
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+    
+    <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '572ec6f08d26f85ff14c',
+        clientSecret: '11c3ef5422eff0b996e4e3e76708f4b4c3e883f3',
+        id: window.location.pathname,
+        repo: 'geekerlee.github.io',
+        owner: 'GeekerLee',
+        admin: 'GeekerLee'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+  </div>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js,gh/nexmoe/nexmoe.github.io@latest/js/app.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!--<script src="/js/app.js?v=1595945676272"></script>-->
+
+
+    <script src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+
+  
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+
+</html>
